@@ -23,4 +23,3 @@ Welcome to my portfolio! I am an **Associate Data Analyst** passionate about tur
 ## 📫 Let's Connect
 * **LinkedIn:** [komal-analyst](https://www.linkedin.com/in/komal-analyst/)
 * **Email:** komal.career16@gmail.com
-* **WhatsApp:** [+91 8819843356](https://wa.me/918819843356)
