@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Komal Mahajan | Data Analyst</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* Global Styles */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top: 100px;}
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#f5f7fb;
+  color:#111;
+}
+a{text-decoration:none;color:inherit}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:#fff;
+  display:flex;
+  justify-content:center;
+  padding:14px;
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+  z-index:1000;
+}
+nav ul{
+  display:flex;
+  gap:25px;
+  list-style:none;
+  margin:0;
+}
+nav ul li a:hover{color:#2563eb; font-weight: 600;}
+
+/* LAYOUT */
+.wrapper{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:30px;
+  padding:100px 30px 40px;
+  max-width:1300px;
+  margin:auto;
+}
+
+/* PROFILE CARD */
+.profile{
+  background:#fff;
+  border-radius:20px;
+  padding:25px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+.profile img{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  object-fit:cover;
+}
+.profile h3{margin:12px 0 4px}
+.profile p{margin:4px 0;font-size:14px}
+.profile .company{color:#2563eb;font-weight:500}
+.profile-icons { margin-top: 15px; }
+.profile-icons a{ margin:0 8px; font-size:22px; }
+.fa-github{color:#000} .fa-linkedin{color:#0a66c2} .fa-envelope{color:#ea4335} .fa-whatsapp{color:#25d366}
+
+/* CONTENT BLOCKS */
+.content{ background:#fff; border-radius:20px; padding:35px; box-shadow:0 10px 25px rgba(0,0,0,.08); }
+section{margin-bottom:60px}
+.section-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; }
+.section-header i { color: #2563eb; font-size: 24px; }
+h1 { font-weight: 400; font-size: 28px; } /* Hello I am not bold */
+h2 { margin: 0; font-size: 26px; }
+h5.job-title { margin: 0 0 10px 0; font-size: 18px; color: #000; font-weight: 700; } /* Bold Black */
+p{line-height:1.7;color:#444}
+
+/* STATS */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; margin: 40px 0; }
+.stat { background: #fff; padding: 40px 20px 30px; border-radius: 20px; text-align: center; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0; }
+.stat-icon-wrapper { position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background: #fff; padding: 10px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); display: flex; }
+.stat img { width: 45px; height: 45px; }
+.stat-text { font-size: 16px; font-weight: 600; }
+.stat-text span { color: #4361ee; font-size: 24px; margin-right: 5px; }
+
+/* SKILLS BUTTONS/TAGS */
+.skill-category { margin-bottom: 25px; }
+.skill-category h4 { margin-bottom: 10px; color: #2563eb; display: flex; align-items: center; gap: 8px; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-tag {
+  background: #f0f4ff;
+  color: #2563eb;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #dbeafe;
+  transition: 0.3s;
+  cursor: default;
+}
+.skill-tag:hover { background: #2563eb; color: #fff; transform: translateY(-2px); }
+
+/* PROJECTS */
+.projects{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+.project-card{ background:#f8fafc; border-radius:16px; overflow:hidden; box-shadow:0 8px 18px rgba(0,0,0,.08); cursor: pointer; transition: 0.3s; }
+.project-card:hover { transform: translateY(-5px); }
+.project-card img{ width:100%; height:160px; object-fit:cover; }
+.project-card .info{ padding:18px; }
+.project-card h4 { margin: 0; }
+.view-btn { display:inline-block; margin-top:10px; padding:6px 14px; border:1px solid #2563eb; border-radius:20px; color:#2563eb; font-size: 13px; }
+
+/* MODAL / POPUP */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+}
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.close-modal { position: absolute; right: 20px; top: 15px; font-size: 28px; cursor: pointer; color: #666; }
+.modal-link { display: block; width: fit-content; margin-top: 20px; background: #2563eb; color: #fff; padding: 10px 25px; border-radius: 10px; font-weight: 600; }
+
+/* LIST CARD */
+.card{ background:#f8fafc; padding:25px; border-radius:16px; }
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .wrapper{grid-template-columns:1fr}
+  .profile { position: relative; top: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="wrapper">
+
+  <div class="profile">
+    <img src="https://avatars.githubusercontent.com/u/250499658?s=400" alt="Komal Mahajan">
+    <h3>Komal Mahajan</h3>
+    <p>Associate Data Analyst</p>
+    <p class="company">Code Precise IT Solution LLP</p>
+    <p class="location">📍 Indore, India</p>
+
+    <div class="profile-icons">
+      <a href="https://github.com/analytics-komal" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/komal-analyst/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:komal.career16@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://wa.me/918819843356" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <section id="about">
+      <h1>Hello, I am <strong>Komal Mahajan</strong></h1>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-icon-wrapper"><img src="https://img.icons8.com/color/48/power-bi.png"></div>
+          <div class="stat-text"><span>2</span> PowerBI Projects</div>
+        </div>
+        <div class="stat">
+          <div class="stat-icon-wrapper"><img src="https://img.icons8.com/color/48/microsoft-excel-2019.png"></div>
+          <div class="stat-text"><span>2</span> Excel Project</div>
+        </div>
+        <div class="stat">
+          <div class="stat-icon-wrapper"><img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/external-sql-coding-and-development-soft-fill-soft-fill-juicy-fish.png"></div>
+          <div class="stat-text"><span>5</span> SQL Projects</div>
+        </div>
+      </div>
+      
+      <div class="section-header">
+        <i class="fa-solid fa-user"></i>
+        <h2>About Me</h2>
+      </div>
+      <div class="card">
+        <p>I am actively seeking a challenging Data Analyst role where I can contribute to meaningful projects, continuously expand my technical toolkit, and deliver significant organizational value through data-driven results.</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-header">
+        <i class="fa-solid fa-briefcase"></i>
+        <h2>My Experience</h2>
+      </div>
+      <div class="card">
+        <h5 class="job-title">Associate Data Analyst — CodePrecise IT Solution LLP</h5>
+        <p>As an Associate Data Analyst, I specialize in end-to-end data workflows, from executing complex T-SQL queries in SQL Server for precise data extraction to developing dynamic Power BI dashboards that translate raw metrics into actionable business KPIs. I leverage advanced Excel functions and Pivot Tables for ad-hoc analysis and rigorous data cleaning, ensuring high integrity across all reporting activities. By managing project requirements through Jira Epics and Stories, I maintain a streamlined workflow that delivers clear, visual insights to stakeholders on schedule.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-header">
+        <i class="fa-solid fa-bolt"></i>
+        <h2>Key Skills</h2>
+      </div>
+      <div class="card">
+        <div class="">
+          <h4>🔹 Excel / Spreadsheets (Strong)</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">VLOOKUP / XLOOKUP</span>
+            <span class="skill-tag">INDEX + MATCH</span>
+            <span class="skill-tag">IF / COUNTIF / SUMIF</span>
+            <span class="skill-tag">Pivot Tables & Charts</span>
+            <span class="skill-tag">Data Cleaning</span>
+            <span class="skill-tag">Conditional Formatting</span>
+            <span class="skill-tag">Dashboards</span>
+          </div>
+        </div>
+        <div class="">
+          <h4>🔹 SQL (Database Management)</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">SELECT / WHERE</span>
+            <span class="skill-tag">JOINs (Inner/Left/Right)</span>
+            <span class="skill-tag">GROUP BY / HAVING</span>
+            <span class="skill-tag">Subqueries</span>
+            <span class="skill-tag">CASE WHEN</span>
+          </div>
+        </div>
+        <div class="">
+          <h4>🔹 Data Visualization (Power BI)</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Data Modeling</span>
+            <span class="skill-tag">DAX (CALCULATE/FILTER)</span>
+            <span class="skill-tag">Slicers & Filters</span>
+            <span class="skill-tag">Interactive Dashboards</span>
+            <span class="skill-tag">Report Publishing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-header">
+        <i class="fa-solid fa-diagram-project"></i>
+        <h2>Projects</h2>
+      </div>
+      <div class="projects">
+        <div class="project-card" onclick="openModal('p1')">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+          <div class="info">
+            <h4>Business Insights 360</h4>
+            <p>Finance Dashboard (Power BI)</p>
+            <span class="view-btn">View Details</span>
+          </div>
+        </div>
+        <div class="project-card" onclick="openModal('p2')">
+          <img src="https://raw.githubusercontent.com/analytics-komal/superstore-sales-analysis/refs/heads/main/Monthly_Sales.png">
+          <div class="info">
+            <h4>Superstore Sales Analysis</h4>
+            <p>Excel & Power BI</p>
+            <span class="view-btn">View Details</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-header">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h2>Education</h2>
+      </div>
+      <div class="card">
+        <p><strong>MCA – Sage University, Indore</strong> (2023 – 2025)</p>
+        <p><strong>BCA – Devi Ahilya Vishwavidyalaya, Indore</strong> (2019 – 2022)</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-header">
+        <i class="fa-solid fa-paper-plane"></i>
+        <h2>Let’s Connect</h2>
+      </div>
+      <p>Open to discussing new projects, creative ideas, or data-driven opportunities.</p>
+      <div class="profile-icons">
+        <a href="https://github.com/analytics-komal" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/komal-analyst/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:komal.career16@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://wa.me/918819843356" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <div id="modalBody">
+      </div>
+  </div>
+</div>
+
+<script>
+const projectData = {
+  p1: {
+    title: "Business Insights 360",
+    overview: "A comprehensive Finance Dashboard created in Power BI to monitor departmental performance.",
+    tools: "Power BI, SQL, Excel",
+    insights: ["Financial KPI tracking", "Revenue trend analysis", "Department-wise expense monitoring"],
+    link: "#"
+  },
+  p2: {
+    title: "Superstore Sales Analysis",
+    overview: "This project analyzes Superstore sales data using Excel and Power BI to identify key business insights.",
+    tools: "Excel (Data Cleaning), Power BI (Visualization)",
+    insights: ["Top 10 products contributing highest sales", "Monthly sales trend analysis", "Product-wise performance comparison"],
+    link: "https://github.com/analytics-komal/superstore-sales-analysis"
+  }
+};
+
+function openModal(id) {
+  const data = projectData[id];
+  const modal = document.getElementById('projectModal');
+  const body = document.getElementById('modalBody');
+  
+  body.innerHTML = `
+    <h2 style="color:#2563eb; margin-bottom:15px;">${data.title}</h2>
+    <h4 style="margin-bottom:5px;">Project Overview</h4>
+    <p>${data.overview}</p>
+    <h4 style="margin-bottom:5px;">Tools Used</h4>
+    <p>${data.tools}</p>
+    <h4 style="margin-bottom:5px;">Key Insights</h4>
+    <ul style="padding-left:20px; color:#444;">
+      ${data.insights.map(item => `<li>${item}</li>`).join('')}
+    </ul>
+    <a href="${data.link}" target="_blank" class="modal-link">Visit Project Link</a>
+  `;
+  
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('projectModal').style.display = "none";
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('projectModal');
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
