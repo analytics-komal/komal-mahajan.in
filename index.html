@@ -161,6 +161,7 @@ p{line-height:1.7;color:#444}
     <li><a href="#projects">Projects</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
+	<li><a href="https://github.com/user-attachments/files/24748471/Komal_Mahajan_Associate_Data_Analyst_Resume_Pune.pdf">Download Resume</a></li>
   </ul>
 </nav>
 
@@ -296,6 +297,52 @@ p{line-height:1.7;color:#444}
       </div>
     </section>
 
+	<section id="certifications">
+  <div class="section-header">
+    <!-- <i class="fa-solid fa-certificate"></i> -->
+	<i class="fa-solid fa-award"></i>
+    <h2>Certifications</h2>
+  </div>
+
+  <div class="projects">
+    <div class="project-card" onclick="openCert('c1')">
+      <!-- <img src="https://certificates.simplicdn.net/share/9626308_9890492_1766470538566.png"> -->
+	  <img src="https://certificates.simplicdn.net/share/9626308_9890492_1766470538566.png">
+      <div class="info">
+        <h5>Data Analytics</h5>
+        <p><small>SimpliLearn</small></p>
+        <span class="view-btn">View Certificate</span></div>
+    </div>
+
+	<div class="project-card" onclick="openCert('c3')">
+      <img src="https://media.licdn.com/dms/image/v2/D4D22AQE5NwVXwUq-zA/feedshare-shrink_2048_1536/B4DZvbnjKPI0Ao-/0/1768916136826?e=1770249600&v=beta&t=jnWHbQioaOjGAVfO62yXLXEijvRhKPe_mQAvPVhesDU">
+      <div class="info">
+        <h5>Gen Powered AI Data Analytics Job Simulation</h5>
+		<p><small>Forage</small></p>
+        <span class="view-btn">View Certificate</span>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="openCert('c2')">
+      <img src="https://certificates.simplicdn.net/share/9673579_9890492_1767436701228.png">
+      <div class="info">
+        <h5>SQL Certification</h5>
+		<p><small>SimpliLearn</small></p>
+        <span class="view-btn">View Certificate</span>
+      </div>
+    </div>
+
+    <div class="project-card" onclick="openCert('c4')">
+      <img src="https://media.licdn.com/dms/image/v2/D4D22AQHa29Ntjr9DaQ/feedshare-shrink_800/B4DZhhfueNGsAk-/0/1753982364526?e=1770249600&v=beta&t=F71bef76zNsod3Y6YaJAuRCap7eknBr6QtFtc1JCmVA">
+      <div class="info">
+        <h5>Excel With Chat GPT</h5>
+		<p><small>Sage University</small></p>
+        <span class="view-btn">View Certificate</span>
+      </div>
+    </div>
+  </div>
+</section>
+	
     <section id="contact">
       <div class="section-header">
         <i class="fa-solid fa-paper-plane"></i>
@@ -369,6 +416,44 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+const certData = {
+  c1: {
+    title: "Data Analytics",
+    provider: "SimpliLearn",
+    img: "https://certificates.simplicdn.net/share/9626308_9890492_1766470538566.png"
+  },
+  c2: {
+    title: "SQL Certification",
+    provider: "SimpliLearn",
+    img: "https://certificates.simplicdn.net/share/9673579_9890492_1767436701228.png"
+  },
+  c3: {
+    title: "Gen Powered AI Data Analytics Job Simulation",
+    provider: "Forage",
+    img: "https://media.licdn.com/dms/image/v2/D4D22AQE5NwVXwUq-zA/feedshare-shrink_2048_1536/B4DZvbnjKPI0Ao-/0/1768916136826?e=1770249600&v=beta&t=jnWHbQioaOjGAVfO62yXLXEijvRhKPe_mQAvPVhesDU"
+  },
+  c4: {
+    title: "Excel With Chat GPT",
+    provider: "Sage University",
+    img: "https://media.licdn.com/dms/image/v2/D4D22AQHa29Ntjr9DaQ/feedshare-shrink_800/B4DZhhfueNGsAk-/0/1753982364526?e=1770249600&v=beta&t=F71bef76zNsod3Y6YaJAuRCap7eknBr6QtFtc1JCmVA"
+  }
+};
+
+function openCert(id) {
+  const data = certData[id];
+  const modal = document.getElementById('projectModal');
+  const body = document.getElementById('modalBody');
+
+  body.innerHTML = `
+    <h2 style="color:#2563eb; margin-bottom:10px;">${data.title}</h2>
+    <p><strong>Provider:</strong> ${data.provider}</p>
+    <img src="${data.img}" style="width:100%; max-width:300px; display:block; margin:20px auto; border-radius:10px;">
+    <a href="${data.img}" target="_blank" class="modal-link">Open Full Certificate</a>
+  `;
+
+  modal.style.display = "block";
 }
 </script>
 
