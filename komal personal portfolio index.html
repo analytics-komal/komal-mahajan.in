@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Komal Mahajan | Data Analyst & MIS Analyst</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Komal Mahajan – Data Analyst | MIS Analyst | SQL | Power BI | Advanced Excel | Dashboard Reporting | Business Intelligence">
+<meta name="keywords" content="Data Analyst, MIS Analyst, SQL, Power BI, Advanced Excel, Dashboard, Business Intelligence, Data Visualization, Reporting, KPI, Data Cleaning">
+<link rel="icon" href="data:,">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root {
+  --primary: #1a56db;
+  --primary-light: #eff4ff;
+  --primary-dark: #1343b5;
+  --accent: #f59e0b;
+  --dark: #0f172a;
+  --mid: #334155;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --bg: #f8fafc;
+  --white: #ffffff;
+  --card-shadow: 0 4px 24px rgba(15,23,42,0.07);
+  --card-shadow-hover: 0 12px 40px rgba(15,23,42,0.14);
+  --radius: 16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+/* ======= HERO / BANNER ======= */
+.hero{
+  position:relative;
+  background:var(--dark);
+  overflow:hidden;
+  padding-bottom:0;
+}
+.hero-banner{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  object-position:center top;
+  display:block;
+  opacity:0.7;
+}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(10,20,50,0.35) 0%, rgba(10,20,50,0.80) 100%);
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:flex-end;
+  gap:28px;
+  padding:0 48px 0 48px;
+  margin-top:-70px;
+}
+.avatar-wrap{
+  flex-shrink:0;
+}
+.avatar-wrap img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  border:4px solid var(--white);
+  object-fit:cover;
+  box-shadow:0 4px 20px rgba(0,0,0,0.25);
+}
+.hero-info{
+  padding-bottom:20px;
+  color:var(--white);
+}
+.hero-info h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(22px,3vw,32px);
+  font-weight:800;
+  letter-spacing:-0.5px;
+  color:#fff;
+  text-shadow:0 2px 8px rgba(0,0,0,0.4);
+}
+.hero-info .tagline{
+  font-size:14px;
+  color:rgba(255,255,255,0.88);
+  margin-top:3px;
+  font-weight:500;
+  letter-spacing:0.3px;
+}
+.hero-info .location{
+  font-size:13px;
+  color:rgba(255,255,255,0.72);
+  margin-top:4px;
+}
+.hero-actions{
+  display:flex;
+  gap:10px;
+  margin-top:12px;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 18px;
+  border-radius:40px;
+  font-size:13px;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.2s;
+  border:none;
+}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-1px)}
+.btn-outline{background:rgba(255,255,255,0.15);color:#fff;border:1.5px solid rgba(255,255,255,0.5);backdrop-filter:blur(4px)}
+.btn-outline:hover{background:rgba(255,255,255,0.28)}
+.social-icons{display:flex;gap:12px;margin-top:10px}
+.social-icons a{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,0.15);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:15px;
+  backdrop-filter:blur(4px);
+  border:1px solid rgba(255,255,255,0.25);
+  transition:all 0.2s;
+}
+.social-icons a:hover{background:var(--primary);border-color:var(--primary);transform:translateY(-2px)}
+
+/* ======= NAV ======= */
+nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(15,23,42,0.06);
+}
+.nav-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:0 32px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:58px;
+}
+.nav-logo{
+  font-family:'Playfair Display',serif;
+  font-size:18px;
+  font-weight:800;
+  color:var(--primary);
+  letter-spacing:-0.3px;
+}
+.nav-links{
+  display:flex;
+  gap:4px;
+  list-style:none;
+}
+.nav-links a{
+  padding:6px 13px;
+  border-radius:8px;
+  font-size:13.5px;
+  font-weight:500;
+  color:var(--mid);
+  transition:all 0.18s;
+}
+.nav-links a:hover{background:var(--primary-light);color:var(--primary)}
+.nav-resume{
+  background:var(--primary);
+  color:#fff!important;
+  border-radius:8px;
+}
+.nav-resume:hover{background:var(--primary-dark)!important;color:#fff!important}
+
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.hamburger span{width:24px;height:2px;background:var(--mid);border-radius:2px;transition:all 0.3s}
+.mobile-menu{
+  display:none;
+  flex-direction:column;
+  background:var(--white);
+  border-top:1px solid var(--border);
+  padding:12px 24px 20px;
+  gap:4px;
+}
+.mobile-menu a{
+  padding:10px 12px;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:500;
+  color:var(--mid);
+  display:block;
+}
+.mobile-menu a:hover{background:var(--primary-light);color:var(--primary)}
+
+/* ======= LAYOUT ======= */
+.container{max-width:1200px;margin:auto;padding:40px 32px}
+
+/* ======= SECTION ======= */
+.section{margin-bottom:56px}
+.section-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:24px;
+}
+.section-title-icon{
+  width:42px;height:42px;
+  background:var(--primary-light);
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--primary);
+  font-size:17px;
+  flex-shrink:0;
+}
+.section-title h2{
+  font-family:'Playfair Display',serif;
+  font-size:22px;
+  font-weight:800;
+  color:var(--dark);
+}
+.section-divider{flex:1;height:1px;background:var(--border)}
+
+/* ======= CARDS ======= */
+.card{
+  background:var(--white);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:var(--card-shadow);
+  border:1px solid var(--border);
+}
+
+/* ======= STATS ======= */
+.stats-row{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:16px;
+  margin-bottom:36px;
+}
+.stat-card{
+  background:var(--white);
+  border-radius:var(--radius);
+  padding:22px 18px;
+  text-align:center;
+  box-shadow:var(--card-shadow);
+  border:1px solid var(--border);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.stat-card:hover{transform:translateY(-4px);box-shadow:var(--card-shadow-hover)}
+.stat-card img{width:40px;height:40px;margin:0 auto 10px}
+.stat-num{font-size:28px;font-weight:800;color:var(--primary);font-family:'Playfair Display',serif}
+.stat-label{font-size:12.5px;color:var(--muted);font-weight:500;margin-top:2px}
+
+/* ======= ABOUT ======= */
+.about-text{
+  font-size:15px;
+  color:var(--mid);
+  line-height:1.8;
+}
+
+/* ======= EXPERIENCE ======= */
+.exp-item{
+  display:flex;
+  gap:20px;
+}
+.exp-timeline{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0;
+}
+.exp-dot{
+  width:14px;height:14px;
+  border-radius:50%;
+  background:var(--primary);
+  border:3px solid var(--primary-light);
+  flex-shrink:0;
+  margin-top:4px;
+}
+.exp-line{flex:1;width:2px;background:var(--border);min-height:40px}
+.exp-body{flex:1;padding-bottom:32px}
+.exp-company{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:6px;
+}
+.exp-badge{
+  background:var(--primary-light);
+  color:var(--primary);
+  font-size:11px;
+  font-weight:700;
+  padding:3px 10px;
+  border-radius:20px;
+  letter-spacing:0.3px;
+}
+.exp-role{font-size:17px;font-weight:700;color:var(--dark)}
+.exp-org{font-size:14px;color:var(--primary);font-weight:600;margin-top:1px}
+.exp-meta{font-size:12.5px;color:var(--muted);margin:4px 0 10px;display:flex;align-items:center;gap:8px}
+.exp-meta i{font-size:11px}
+.exp-desc{font-size:14px;color:var(--mid);line-height:1.75}
+.exp-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.exp-tag{
+  background:#f1f5f9;
+  color:var(--mid);
+  font-size:12px;
+  padding:4px 12px;
+  border-radius:20px;
+  font-weight:500;
+}
+
+/* ======= SKILLS ======= */
+.skills-grid{display:flex;flex-direction:column;gap:20px}
+.skill-group{}
+.skill-group-title{
+  font-size:13px;
+  font-weight:700;
+  color:var(--primary);
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:10px;
+  display:flex;align-items:center;gap:7px;
+}
+.skill-group-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{
+  background:var(--primary-light);
+  color:var(--primary);
+  padding:6px 14px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:500;
+  border:1px solid #c7d7fe;
+  transition:all 0.2s;
+  cursor:default;
+}
+.tag:hover{background:var(--primary);color:#fff;transform:translateY(-2px)}
+.tag.green{background:#f0fdf4;color:#15803d;border-color:#bbf7d0}
+.tag.green:hover{background:#15803d;color:#fff}
+.tag.amber{background:#fffbeb;color:#b45309;border-color:#fde68a}
+.tag.amber:hover{background:#b45309;color:#fff}
+.tag.slate{background:#f1f5f9;color:#475569;border-color:#cbd5e1}
+.tag.slate:hover{background:#475569;color:#fff}
+
+/* ======= PROJECTS ======= */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+}
+.project-card{
+  background:var(--white);
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:var(--card-shadow);
+  cursor:pointer;
+  transition:transform 0.25s,box-shadow 0.25s;
+}
+.project-card:hover{transform:translateY(-6px);box-shadow:var(--card-shadow-hover)}
+.project-img{
+  width:100%;height:170px;
+  object-fit:cover;
+}
+.project-body{padding:20px}
+.project-tools{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.tool-badge{
+  font-size:11px;
+  font-weight:600;
+  padding:3px 10px;
+  border-radius:20px;
+  background:#eff4ff;
+  color:var(--primary);
+  border:1px solid #c7d7fe;
+}
+.project-title{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:5px}
+.project-desc{font-size:13px;color:var(--muted);line-height:1.6}
+.project-footer{
+  padding:12px 20px;
+  border-top:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:center;
+}
+.project-link{
+  font-size:13px;
+  font-weight:600;
+  color:var(--primary);
+  display:flex;align-items:center;gap:5px;
+}
+.project-link:hover{color:var(--primary-dark)}
+
+/* ======= CERTS ======= */
+.certs-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+}
+.cert-card{
+  background:var(--white);
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:var(--card-shadow);
+  cursor:pointer;
+  transition:transform 0.25s,box-shadow 0.25s;
+}
+.cert-card:hover{transform:translateY(-4px);box-shadow:var(--card-shadow-hover)}
+.cert-img{
+  width:100%;
+  height:130px;
+  object-fit:cover;
+  background:#f1f5f9;
+}
+.cert-body{padding:14px}
+.cert-provider{
+  font-size:11px;
+  color:var(--primary);
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  margin-bottom:4px;
+}
+.cert-name{font-size:13.5px;font-weight:700;color:var(--dark);line-height:1.4}
+.cert-view{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  margin-top:8px;
+  font-size:12px;
+  font-weight:600;
+  color:var(--primary);
+}
+.cert-view:hover{color:var(--primary-dark)}
+
+/* ======= EDUCATION ======= */
+.edu-list{display:flex;flex-direction:column;gap:16px}
+.edu-item{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+}
+.edu-icon{
+  width:44px;height:44px;
+  border-radius:12px;
+  background:var(--primary-light);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--primary);
+  font-size:18px;
+  flex-shrink:0;
+}
+.edu-body{}
+.edu-degree{font-size:15px;font-weight:700;color:var(--dark)}
+.edu-school{font-size:14px;color:var(--primary);font-weight:600;margin-top:2px}
+.edu-meta{font-size:12.5px;color:var(--muted);margin-top:3px;display:flex;gap:14px;flex-wrap:wrap}
+.edu-gpa{
+  display:inline-flex;align-items:center;gap:4px;
+  background:#fefce8;color:#854d0e;
+  padding:2px 9px;border-radius:12px;font-size:11.5px;font-weight:700;
+}
+
+/* ======= CONTACT ======= */
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px;
+}
+.contact-item{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 18px;
+  background:var(--white);
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  box-shadow:var(--card-shadow);
+  transition:transform 0.2s;
+  text-decoration:none;
+}
+.contact-item:hover{transform:translateY(-3px);box-shadow:var(--card-shadow-hover)}
+.contact-icon{
+  width:40px;height:40px;
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;
+  flex-shrink:0;
+}
+.ci-email{background:#fef2f2;color:#dc2626}
+.ci-phone{background:#f0fdf4;color:#16a34a}
+.ci-linkedin{background:#eff4ff;color:#1a56db}
+.ci-github{background:#f8fafc;color:#0f172a}
+.contact-label{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+.contact-value{font-size:13.5px;font-weight:600;color:var(--dark);margin-top:1px}
+
+/* ======= MODAL ======= */
+.modal{
+  display:none;
+  position:fixed;inset:0;
+  z-index:1000;
+  background:rgba(15,23,42,0.65);
+  backdrop-filter:blur(6px);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+.modal.active{display:flex}
+.modal-box{
+  background:var(--white);
+  border-radius:20px;
+  width:100%;
+  max-width:640px;
+  max-height:90vh;
+  overflow-y:auto;
+  box-shadow:0 24px 60px rgba(0,0,0,0.25);
+  animation:fadeUp 0.3s ease;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.modal-header{
+  padding:28px 28px 20px;
+  border-bottom:1px solid var(--border);
+  display:flex;justify-content:space-between;align-items:flex-start;
+  position:sticky;top:0;background:var(--white);z-index:2;
+  border-radius:20px 20px 0 0;
+}
+.modal-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:800;color:var(--dark)}
+.modal-close{
+  width:36px;height:36px;
+  border-radius:50%;
+  border:none;
+  background:#f1f5f9;
+  cursor:pointer;
+  font-size:18px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--mid);
+  transition:all 0.2s;
+  flex-shrink:0;
+}
+.modal-close:hover{background:#e2e8f0;color:var(--dark)}
+.modal-body{padding:24px 28px 28px}
+.modal-section{margin-bottom:20px}
+.modal-section-title{
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  color:var(--primary);
+  margin-bottom:8px;
+}
+.modal-text{font-size:14px;color:var(--mid);line-height:1.75}
+.modal-tags{display:flex;flex-wrap:wrap;gap:7px}
+.modal-tag{
+  background:var(--primary-light);color:var(--primary);
+  padding:5px 13px;border-radius:20px;font-size:12.5px;font-weight:500;
+  border:1px solid #c7d7fe;
+}
+.modal-list{padding-left:18px;display:flex;flex-direction:column;gap:5px}
+.modal-list li{font-size:14px;color:var(--mid);line-height:1.6}
+.modal-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--primary);color:#fff;
+  padding:10px 22px;border-radius:10px;font-size:14px;font-weight:600;
+  margin-top:4px;transition:background 0.2s;
+}
+.modal-cta:hover{background:var(--primary-dark)}
+.modal-img{width:100%;border-radius:12px;margin-bottom:16px;border:1px solid var(--border)}
+
+/* ======= FOOTER ======= */
+footer{
+  background:var(--dark);
+  color:rgba(255,255,255,0.65);
+  text-align:center;
+  padding:28px 20px;
+  font-size:13px;
+}
+footer a{color:var(--accent);font-weight:600}
+
+/* ======= RESPONSIVE ======= */
+@media(max-width:768px){
+  .hero-content{flex-direction:column;align-items:flex-start;padding:0 20px;margin-top:-50px}
+  .avatar-wrap img{width:90px;height:90px}
+  .hero-banner{height:160px}
+  .container{padding:28px 16px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .projects-grid{grid-template-columns:1fr}
+  .certs-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .modal-box{max-height:95vh}
+  .modal-header,.modal-body{padding-left:20px;padding-right:20px}
+  .nav-inner{padding:0 16px}
+}
+@media(max-width:420px){
+  .certs-grid{grid-template-columns:1fr}
+  .hero-info h1{font-size:20px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<div class="hero">
+  <img class="hero-banner" src="https://media.licdn.com/dms/image/v2/D4D16AQEYYbQuEY3NEA/profile-displaybackgroundimage-shrink_350_1400/B4DZ53V.w7J8AU-/0/1780118711679?e=1781740800&v=beta&t=hM3HpHt4vAlXDCEV2k-9Wg-6_ABEp45uVV5NInUHJLk" alt="Banner" onerror="this.style.background='linear-gradient(135deg,#1a56db,#0f172a)';this.removeAttribute('src')">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="avatar-wrap">
+      <img src="https://avatars.githubusercontent.com/u/250499658?s=400" alt="Komal Mahajan" onerror="this.src='https://ui-avatars.com/api/?name=Komal+Mahajan&background=1a56db&color=fff&size=120'">
+    </div>
+    <div class="hero-info">
+      <h1>Komal Mahajan</h1>
+      <div class="tagline">Data Analyst &nbsp;·&nbsp; MIS Analyst &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Power BI &nbsp;·&nbsp; Advanced Excel</div>
+      <div class="location"><i class="fa-solid fa-location-dot" style="font-size:11px"></i>&nbsp; Pune, Maharashtra, India &nbsp;·&nbsp; Open to Remote &amp; Relocation &nbsp;·&nbsp; Immediate Joiner</div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://drive.google.com/file/d/1x7IPp2x4_zFZVzC9_wrj8rlZ-_sxkNyS/view" target="_blank"><i class="fa-solid fa-download"></i> Download Resume</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/komal-analyst/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a class="btn btn-outline" href="mailto:komal.career16@gmail.com"><i class="fa-solid fa-envelope"></i> Email Me</a>
+      </div>
+      <div class="social-icons">
+        <a href="https://github.com/analytics-komal" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/komal-analyst/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:komal.career16@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+918007800255" title="Phone"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo"></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="nav-resume" href="https://drive.google.com/file/d/1x7IPp2x4_zFZVzC9_wrj8rlZ-_sxkNyS/view" target="_blank">Resume ↗</a></li>
+    </ul>
+    <div class="hamburger" id="hamburgerBtn" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#experience" onclick="toggleMenu()">Experience</a>
+    <a href="#skills" onclick="toggleMenu()">Skills</a>
+    <a href="#projects" onclick="toggleMenu()">Projects</a>
+    <a href="#certifications" onclick="toggleMenu()">Certifications</a>
+    <a href="#education" onclick="toggleMenu()">Education</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <a href="https://github.com/user-attachments/files/24748471/Komal_Mahajan_Associate_Data_Analyst_Resume_Pune.pdf" target="_blank">Download Resume</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-title">
+      <div class="section-title-icon"><i class="fa-solid fa-user"></i></div>
+      <h2>About Me</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-card">
+        <img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI">
+        <div class="stat-num">3</div>
+        <div class="stat-label">Power BI Projects</div>
+      </div>
+      <div class="stat-card">
+        <img src="https://img.icons8.com/color/48/microsoft-excel-2019.png" alt="Excel">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Excel Projects</div>
+      </div>
+      <div class="stat-card">
+        <img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/external-sql-coding-and-development-soft-fill-soft-fill-juicy-fish.png" alt="SQL">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">SQL Projects</div>
+      </div>
+      <div class="stat-card">
+        <img src="https://img.icons8.com/color/48/certificate.png" alt="Certs">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+    </div>
+    <div class="card">
+      <p class="about-text">
+        I am a motivated and results-oriented <strong>Data Analyst & MIS Analyst</strong> — MCA 2025 graduate with 1 year of hands-on experience in the Education domain. I specialize in turning complex, raw data into clear, actionable insights that empower data-led decisions.
+        <br><br>
+        My expertise spans the full data lifecycle: from SQL-based data extraction and validation, to Advanced Excel reporting, Power BI dashboard development, and KPI tracking. I am experienced in preparing daily, monthly, and yearly MIS reports, performing data cleaning & transformation, and collaborating with stakeholders to deliver accurate, timely reporting solutions.
+        <br><br>
+        I am actively seeking a challenging <strong>Data Analyst / MIS Analyst</strong> role where I can contribute to meaningful projects, continuously expand my technical toolkit, and deliver significant organizational value through data-driven results. <strong>Immediate Joiner.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="section-title">
+      <div class="section-title-icon"><i class="fa-solid fa-briefcase"></i></div>
+      <h2>Work Experience</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="card">
+      <div class="exp-item">
+        <div class="exp-timeline">
+          <div class="exp-dot"></div>
+          <div class="exp-line"></div>
+        </div>
+        <div class="exp-body">
+          <div class="exp-company">
+            <span class="exp-badge">FULL TIME · 1 YEAR</span>
+          </div>
+          <div class="exp-role">MIS Analyst</div>
+          <div class="exp-org">Code Precise IT Solution LLP, Indore</div>
+          <div class="exp-meta">
+            <i class="fa-regular fa-calendar"></i> May 2025 – April 2026
+            &nbsp;·&nbsp;
+            <i class="fa-solid fa-building"></i> Education Domain – Maestro.Study
+          </div>
+          <div class="exp-desc">
+            Worked as an MIS Analyst responsible for end-to-end reporting and business data operations in the Education domain.
+            <ul style="margin-top:10px;padding-left:18px;display:flex;flex-direction:column;gap:6px">
+              <li>Prepared daily, monthly, and yearly MIS reports using Advanced Excel and SQL Server to support management decision-making.</li>
+              <li>Extracted, analyzed, and validated data using SQL queries, JOINs, aggregations, and subqueries for accurate reporting.</li>
+              <li>Performed data cleaning, data transformation, and data maintenance to ensure reporting accuracy and data quality.</li>
+              <li>Created Excel reports using Pivot Tables, VLOOKUP/XLOOKUP, COUNTIF/SUMIF formulas, conditional formatting, and charts.</li>
+              <li>Assisted in Power BI dashboard development, KPI tracking, and interactive dashboard reporting for stakeholders.</li>
+              <li>Supported client reporting activities, maintained data records, and ensured proper data organization for business analysis.</li>
+            </ul>
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">SQL Server</span>
+            <span class="exp-tag">Advanced Excel</span>
+            <span class="exp-tag">Power BI</span>
+            <span class="exp-tag">MIS Reporting</span>
+            <span class="exp-tag">Data Validation</span>
+            <span class="exp-tag">Dashboard Reporting</span>
+            <span class="exp-tag">KPI Tracking</span>
+            <span class="exp-tag">Data Cleaning</span>
+            <span class="exp-tag">Pivot Tables</span>
+            <span class="exp-tag">Business Reporting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section-title">
+      <div class="section-title-icon"><i class="fa-solid fa-bolt"></i></div>
+      <h2>Technical Skills</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="card">
+      <div class="skills-grid">
+        <div class="skill-group">
+          <div class="skill-group-title"><i class="fa-solid fa-database"></i> SQL & Databases</div>
+          <div class="tags">
+            <span class="tag">Microsoft SQL Server</span>
+            <span class="tag">SQL Queries</span>
+            <span class="tag">JOINs (Inner/Left/Right)</span>
+            <span class="tag">GROUP BY / HAVING</span>
+            <span class="tag">Subqueries</span>
+            <span class="tag">CASE WHEN</span>
+            <span class="tag">Data Extraction</span>
+            <span class="tag">Data Maintenance</span>
+            <span class="tag">Aggregations</span>
+            <span class="tag">Filtering & Sorting</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title"><i class="fa-solid fa-file-excel"></i> Microsoft Excel (Advanced)</div>
+          <div class="tags">
+            <span class="tag green">VLOOKUP / XLOOKUP</span>
+            <span class="tag green">INDEX + MATCH</span>
+            <span class="tag green">IF / COUNTIF / SUMIF</span>
+            <span class="tag green">Pivot Tables & Charts</span>
+            <span class="tag green">Conditional Formatting</span>
+            <span class="tag green">Data Validation</span>
+            <span class="tag green">Report Preparation</span>
+            <span class="tag green">Dashboards</span>
+            <span class="tag green">Data Cleaning</span>
+            <span class="tag green">HLOOKUP</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title"><i class="fa-solid fa-chart-bar"></i> Data Visualization & BI</div>
+          <div class="tags">
+            <span class="tag amber">Power BI</span>
+            <span class="tag amber">DAX (CALCULATE / FILTER)</span>
+            <span class="tag amber">Data Modeling</span>
+            <span class="tag amber">Interactive Dashboards</span>
+            <span class="tag amber">Slicers & Filters</span>
+            <span class="tag amber">KPI Cards & Reporting</span>
+            <span class="tag amber">Report Publishing</span>
+            <span class="tag amber">Business Intelligence</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title"><i class="fa-solid fa-gears"></i> Data & Reporting</div>
+          <div class="tags">
+            <span class="tag slate">Data Analysis</span>
+            <span class="tag slate">MIS Reporting</span>
+            <span class="tag slate">Business Reporting</span>
+            <span class="tag slate">Dashboard Development</span>
+            <span class="tag slate">Data Transformation</span>
+            <span class="tag slate">Data Visualization</span>
+            <span class="tag slate">Exploratory Data Analysis</span>
+            <span class="tag slate">Business Intelligence Reporting</span>
+            <span class="tag slate">Reports and Dashboards</span>
+            <span class="tag slate">Business Data Analysis</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title"><i class="fa-solid fa-robot"></i> AI & Productivity Tools</div>
+          <div class="tags">
+            <span class="tag">Python (Basics)</span>
+            <span class="tag">Microsoft Copilot</span>
+            <span class="tag">Google Gemini</span>
+            <span class="tag">ChatGPT</span>
+            <span class="tag">GenAI for Data Analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-title">
+      <div class="section-title-icon"><i class="fa-solid fa-diagram-project"></i></div>
+      <h2>Projects</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="projects-grid">
+
+      <!-- HR Dashboard -->
+      <div class="project-card" onclick="openProject('hr')">
+        <div class="project-body">
+        <img class="project-img" src="https://raw.githubusercontent.com/analytics-komal/hr-analytics-dashboard/refs/heads/main/Dashbord%20.png" alt="HR Analytics">
+		</br>
+          <div class="project-tools">
+            <span class="tool-badge">SQL</span>
+            <span class="tool-badge">Power BI</span>
+            <span class="tool-badge">Excel</span>
+          </div>
+          <div class="project-title">HR Analytics Dashboard</div>
+          <div class="project-desc">Employee attrition analysis with interactive Power BI dashboards, KPI tracking, and department-wise insights.</div>
+        </div>
+        <div class="project-footer">
+          <span class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Details</span>
+          <span style="font-size:11px;color:var(--muted)">Feb 2025</span>
+        </div>
+      </div>
+
+      <!-- Business Insights 360 -->
+      <div class="project-card" onclick="openProject('bi360')">
+        <div class="project-body">
+		<img class="project-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600" alt="Business Insights">
+		</br>
+          <div class="project-tools">
+            <span class="tool-badge">Power BI</span>
+            <span class="tool-badge">SQL</span>
+            <span class="tool-badge">Excel</span>
+          </div>
+          <div class="project-title">Business Insights 360</div>
+          <div class="project-desc">Comprehensive Finance & KPI Dashboard built in Power BI to monitor departmental performance and revenue trends.</div>
+        </div>
+        <div class="project-footer">
+          <span class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Details</span>
+          <span style="font-size:11px;color:var(--muted)">2025</span>
+        </div>
+      </div>
+
+      <!-- Superstore Sales -->
+      <div class="project-card" onclick="openProject('superstore')">
+        <div class="project-body">
+        <img class="project-img" src="https://raw.githubusercontent.com/analytics-komal/superstore-sales-analysis/refs/heads/main/Monthly_Sales.png" alt="Superstore Sales" onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600'">
+		</br>
+          <div class="project-tools">
+            <span class="tool-badge">Excel</span>
+            <span class="tool-badge">Power BI</span>
+            <span class="tool-badge">SQL</span>
+          </div>
+          <div class="project-title">Superstore Sales Analysis</div>
+          <div class="project-desc">Retail sales analytics with interactive dashboards to track top products, monthly trends, and regional performance.</div>
+        </div>
+        <div class="project-footer">
+          <span class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Details</span>
+          <span style="font-size:11px;color:var(--muted)">Jan 2025</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section" id="certifications">
+    <div class="section-title">
+      <div class="section-title-icon"><i class="fa-solid fa-award"></i></div>
+      <h2>Certifications</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card" onclick="openCert('c1')">
+        <div class="cert-body">
+		  <img class="cert-img" src="https://certificates.simplicdn.net/share/9626308_9890492_1766470538566.png">
+		  </br>
+          <div class="cert-provider">SimpliLearn SkillUP</div> 
+          <div class="cert-name">Introduction to Data Analytics</div>
+          <div class="cert-view"><i class="fa-solid fa-eye"></i> View Certificate</div>
+        </div>
+      </div>
+      <div class="cert-card" onclick="openCert('c2')">
+        <div class="cert-body">
+		  <img class="cert-img" src="https://certificates.simplicdn.net/share/9673579_9890492_1767436701228.png">
+		  </br>
+          <div class="cert-provider">SimpliLearn SkillUP</div>
+          <div class="cert-name">Introduction to SQL</div>
+          <div class="cert-view"><i class="fa-solid fa-eye"></i> View Certificate</div>
+        </div>
+      </div>
+      <div class="cert-card" onclick="openCert('c3')">
+        <div class="cert-body">
+		  <img class="cert-img" src="https://raw.githubusercontent.com/analytics-komal/Certifications/refs/heads/main/GenAI_Powered_Data%20_Analystics_job_Simulation_certificate_page-0001.jpg">
+		  </br>
+          <div class="cert-provider">Tata / Forage</div>
+          <div class="cert-name">GenAI Powered Data Analytics Job Simulation</div>
+          <div class="cert-view"><i class="fa-solid fa-eye"></i> View Certificate</div>
+        </div>
+      </div>
+      <div class="cert-card" onclick="openCert('c4')">
+        <div class="cert-body">
+		  <img class="cert-img" src="https://raw.githubusercontent.com/analytics-komal/Certifications/refs/heads/main/Excel_with_chatgpt.jpg">
+          </br>
+		  <div class="cert-provider">Sage University</div>
+          <div class="cert-name">Excel with ChatGPT</div>
+          <div class="cert-view"><i class="fa-solid fa-eye"></i> View Certificate</div>
+        </div>
+      </div>
+      <div class="cert-card" onclick="openCert('c5')">
+        <div class="cert-body">
+		  <img class="cert-img" src="https://media.licdn.com/dms/image/v2/D4D2DAQFTQNAPoe6C1A/profile-treasury-image-shrink_800_800/B4DZwnEngBJ0AY-/0/1770182051416?e=1780740000&v=beta&t=xiwePB2fB2fOx_XdUKaOLMK_ba7nxAUYJN0jgeVSHMQ">
+          </br>
+		  <div class="cert-provider">Accounts Expert</div>
+          <div class="cert-name">Analyzing and Visualizing Data with Microsoft Power BI</div>
+          <div class="cert-view"><i class="fa-solid fa-eye"></i> View Details</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="section-title">
+      <div class="section-title-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+      <h2>Education</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="card">
+      <div class="edu-list">
+        <div class="edu-item">
+          <div class="edu-icon"><i class="fa-solid fa-university"></i></div>
+          <div class="edu-body">
+            <div class="edu-degree">Master of Computer Applications (MCA)</div>
+            <div class="edu-school">Sage University, Indore</div>
+            <div class="edu-meta">
+              <span><i class="fa-regular fa-calendar"></i> Dec 2023 – Jun 2025</span>
+              <span class="edu-gpa">⭐ GPA: 8.03</span>
+            </div>
+          </div>
+        </div>
+        <div style="height:1px;background:var(--border);margin:8px 0"></div>
+        <div class="edu-item">
+          <div class="edu-icon"><i class="fa-solid fa-book"></i></div>
+          <div class="edu-body">
+            <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
+            <div class="edu-school">Devi Ahilya Vishwavidyalaya (DAVV), Indore</div>
+            <div class="edu-meta">
+              <span><i class="fa-regular fa-calendar"></i> Sep 2019 – Jun 2022</span>
+              <span class="edu-gpa">⭐ GPA: 7.0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-title">
+      <div class="section-title-icon"><i class="fa-solid fa-paper-plane"></i></div>
+      <h2>Let's Connect</h2>
+      <div class="section-divider"></div>
+    </div>
+    <p style="font-size:15px;color:var(--mid);margin-bottom:20px">Open to Data Analyst, MIS Analyst, Reporting Analyst, and Business Intelligence roles. <strong>Immediate Joiner.</strong></p>
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:komal.career16@gmail.com">
+        <div class="contact-icon ci-email"><i class="fa-solid fa-envelope"></i></div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">komal.career16@gmail.com</div>
+        </div>
+      </a>
+      <a class="contact-item" href="tel:+918007800255">
+        <div class="contact-icon ci-phone"><i class="fa-solid fa-phone"></i></div>
+        <div>
+          <div class="contact-label">Phone</div>
+          <div class="contact-value">+91 8007800255</div>
+        </div>
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/in/komal-analyst/" target="_blank">
+        <div class="contact-icon ci-linkedin"><i class="fab fa-linkedin"></i></div>
+        <div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">komal-analyst</div>
+        </div>
+      </a>
+      <a class="contact-item" href="https://github.com/analytics-komal" target="_blank">
+        <div class="contact-icon ci-github"><i class="fab fa-github"></i></div>
+        <div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value">analytics-komal</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</div><!-- /container -->
+
+<footer>
+  <p>© 2026 <strong style="color:#fff">Komal Mahajan</strong> · Data Analyst · MIS Analyst · <a href="https://www.linkedin.com/in/komal-analyst/" target="_blank">LinkedIn</a> · <a href="https://github.com/analytics-komal" target="_blank">GitHub</a></p>
+  <p style="margin-top:6px;font-size:12px">SQL &nbsp;·&nbsp; Power BI &nbsp;·&nbsp; Advanced Excel &nbsp;·&nbsp; Dashboard Reporting &nbsp;·&nbsp; Business Intelligence &nbsp;·&nbsp; Data Visualization</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title" id="modal-title"></div>
+      <button class="modal-close" onclick="closeModalBtn()">×</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+function toggleMenu(){
+  const m=document.getElementById('mobileMenu');
+  m.style.display=m.style.display==='flex'?'none':'flex';
+  if(m.style.display==='flex')m.style.flexDirection='column';
+}
+
+const projects={
+  hr:{
+    title:"📊 HR Analytics Dashboard",
+    img:"https://raw.githubusercontent.com/analytics-komal/hr-analytics-dashboard/refs/heads/main/Dashbord%20.png",
+    githubLink:"https://github.com/analytics-komal/hr-analytics-dashboard",
+    date:"Feb 2025",
+    description:"This project focuses on analyzing employee attrition trends and workforce data. SQL is used for data analysis and Power BI is used to build interactive dashboards for better HR decision-making.",
+    tools:["SQL","Microsoft Excel","Power BI","DAX","Data Cleaning"],
+    insights:[
+      "Higher attrition observed in certain departments",
+      "Salary impacts employee retention significantly",
+      "Experience level affects employee turnover patterns",
+      "Department-wise attrition breakdown for targeted HR action"
+    ],
+    features:[
+      "KPI Tracking – Attrition %, Total Employees, Active Count",
+      "Department-wise Attrition Analysis",
+      "Interactive Power BI Dashboard with slicers & filters",
+      "Data Cleaning & Transformation pipeline",
+      "Salary & Gender-based attrition analysis"
+    ],
+    files:["Dataset (CSV/Excel)","SQL Queries (.sql)","Power BI Dashboard (.pbix)"],
+    conclusion:"This project helps in understanding key factors affecting employee attrition and supports data-driven HR decisions."
+  },
+  bi360:{
+    title:"📈 Business Insights 360",
+    img:null,
+    githubLink:"#",
+    date:"2025",
+    description:"A comprehensive Finance & KPI Dashboard created in Power BI to monitor departmental performance, revenue trends, and expense breakdowns across business units.",
+    tools:["Power BI","SQL","Excel","DAX","Data Modeling"],
+    insights:[
+      "Financial KPI tracking across departments",
+      "Revenue trend analysis (monthly/quarterly)",
+      "Department-wise expense monitoring",
+      "Profit margin and cost variance insights"
+    ],
+    features:[
+      "Multi-page Power BI report with drill-through",
+      "DAX measures for CALCULATE, FILTER, SUMX",
+      "Interactive slicers for department, date range, region",
+      "KPI cards for Revenue, Profit, Expense, Growth %",
+      "Data Modeling with star schema"
+    ],
+    files:["Power BI Dashboard (.pbix)","SQL Data Queries","Excel Source Data"],
+    conclusion:"Enables business stakeholders to monitor performance at a glance and make faster, data-driven decisions."
+  },
+  superstore:{
+    title:"🛒 Superstore Sales Analysis",
+    img:"https://raw.githubusercontent.com/analytics-komal/superstore-sales-analysis/refs/heads/main/Monthly_Sales.png",
+    githubLink:"https://github.com/analytics-komal/superstore-sales-analysis",
+    date:"Jan 2025",
+    description:"Analyzed retail sales data using Excel and Power BI for comprehensive reporting and visualization. Covers product performance, regional analysis, and monthly sales trends.",
+    tools:["Microsoft Excel","Power BI","SQL","Pivot Tables","Data Cleaning"],
+    insights:[
+      "Top 10 products contributing highest sales revenue",
+      "Monthly sales trend analysis across categories",
+      "Product-wise performance and profitability comparison",
+      "Regional sales distribution and market share"
+    ],
+    features:[
+      "Data cleaning and validation using Excel & Power Query",
+      "Interactive Power BI dashboards with slicers",
+      "Pivot Table-based Excel reporting",
+      "SQL queries for data extraction and filtering",
+      "KPI dashboards for Sales, Profit, Orders, Category Performance"
+    ],
+    files:["Dataset (CSV)","Excel Report (.xlsx)","Power BI Dashboard (.pbix)"],
+    conclusion:"Identified key sales drivers and underperforming categories to support strategic business reporting decisions."
+  }
+};
+
+function openProject(id){
+  const p=projects[id];
+  document.getElementById('modal-title').textContent=p.title;
+  let html='';
+  if(p.img) html+=`<img src="${p.img}" class="modal-img" alt="${p.title}" onerror="this.style.display='none'">`;
+  html+=`<div class="modal-section"><div class="modal-section-title">Description</div><p class="modal-text">${p.description}</p></div>`;
+  html+=`<div class="modal-section"><div class="modal-section-title">🛠️ Tools Used</div><div class="modal-tags">${p.tools.map(t=>`<span class="modal-tag">${t}</span>`).join('')}</div></div>`;
+  html+=`<div class="modal-section"><div class="modal-section-title">📈 Key Insights</div><ul class="modal-list">${p.insights.map(i=>`<li>${i}</li>`).join('')}</ul></div>`;
+  html+=`<div class="modal-section"><div class="modal-section-title">✅ Features</div><ul class="modal-list">${p.features.map(f=>`<li>${f}</li>`).join('')}</ul></div>`;
+  html+=`<div class="modal-section"><div class="modal-section-title">📂 Project Files</div><div class="modal-tags">${p.files.map(f=>`<span class="modal-tag">📄 ${f}</span>`).join('')}</div></div>`;
+  html+=`<div class="modal-section"><div class="modal-section-title">🎯 Conclusion</div><p class="modal-text">${p.conclusion}</p></div>`;
+  if(p.githubLink && p.githubLink!='#') html+=`<a href="${p.githubLink}" target="_blank" class="modal-cta"><i class="fab fa-github"></i> View on GitHub</a>`;
+  document.getElementById('modal-body').innerHTML=html;
+  document.getElementById('modal').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+
+const certs={
+  c1:{title:"Introduction to Data Analytics",provider:"SimpliLearn SkillUP",img:"https://certificates.simplicdn.net/share/9626308_9890492_1766470538566.png"},
+  c2:{title:"Introduction to SQL",provider:"SimpliLearn SkillUP",img:"https://certificates.simplicdn.net/share/9673579_9890492_1767436701228.png"},
+  c3:{title:"GenAI Powered Data Analytics Job Simulation",provider:"Tata / Forage",img:"https://raw.githubusercontent.com/analytics-komal/Certifications/refs/heads/main/GenAI_Powered_Data%20_Analystics_job_Simulation_certificate_page-0001.jpg"},
+  c4:{title:"Excel with ChatGPT",provider:"Sage University",img:"https://raw.githubusercontent.com/analytics-komal/Certifications/refs/heads/main/Excel_with_chatgpt.jpg"},
+  c5:{title:"Analyzing and Visualizing Data with Microsoft Power BI",provider:"Accounts Expert",img:"https://media.licdn.com/dms/image/v2/D4D2DAQFTQNAPoe6C1A/profile-treasury-image-shrink_800_800/B4DZwnEngBJ0AY-/0/1770182051416?e=1780740000&v=beta&t=xiwePB2fB2fOx_XdUKaOLMK_ba7nxAUYJN0jgeVSHMQ"},
+};
+
+function openCert(id){
+  const c=certs[id];
+  document.getElementById('modal-title').textContent=c.title;
+  let html='';
+  if(c.img) html+=`<img src="${c.img}" class="modal-img" alt="${c.title}" style="max-width:420px;margin:0 auto" onerror="this.style.display='none'">`;
+  else html+=`<div style="background:linear-gradient(135deg,#eff4ff,#dbeafe);border-radius:12px;padding:40px;text-align:center;margin-bottom:16px"><i class="fa-solid fa-certificate" style="font-size:56px;color:#1a56db;opacity:0.7"></i></div>`;
+  html+=`<div class="modal-section"><div class="modal-section-title">Provider</div><p class="modal-text" style="font-weight:600;color:var(--primary)">${c.provider}</p></div>`;
+  if(c.img) html+=`<a href="${c.img}" target="_blank" class="modal-cta"><i class="fa-solid fa-external-link-alt"></i> Open Full Certificate</a>`;
+  document.getElementById('modal-body').innerHTML=html;
+  document.getElementById('modal').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+
+function closeModalBtn(){
+  document.getElementById('modal').classList.remove('active');
+  document.body.style.overflow='';
+}
+function closeModal(e){
+  if(e.target===document.getElementById('modal')) closeModalBtn();
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape') closeModalBtn()});
+</script>
+</body>
+</html>
