@@ -1,4 +1,4 @@
-# Data Analyst Portfolio - Komal Mahajan
+# MIS / Data Analyst Portfolio - Komal Mahajan
 
 Welcome to my portfolio! I am an **Associate Data Analyst** passionate about turning raw data into actionable business insights. This repository contains the source code for my personal portfolio website and documentation for my key data projects.
 
