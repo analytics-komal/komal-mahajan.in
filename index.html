@@ -2020,22 +2020,28 @@
 
     <!-- HackerRank Achievement -->
     <div class="container">
-      <div class="hacker-achievement glass-card border-purple">
-        <div class="achievement-icon"><i class="fa-solid fa-star"></i></div>
-        <h3>5-Star Gold Badge — SQL</h3>
-        <p>Achieved the 5-Star Gold Badge in SQL on HackerRank, reflecting a strong foundation in SQL, Advanced SQL, and MIS & Data Analytics. I enjoy solving real-world data problems and transforming raw data into meaningful insights.</p>
-        <div class="hacker-tags">
-          <span class="tag-pill badge-purple">Joins</span>
-          <span class="tag-pill badge-cyan">CTEs</span>
-          <span class="tag-pill badge-pink">Subqueries</span>
-          <span class="tag-pill badge-blue">Window Functions</span>
-          <span class="tag-pill badge-purple">Query Optimization</span>
-        </div>
-        <a href="https://www.hackerrank.com/profile/komal_career16" target="_blank" class="btn-premium btn-premium-secondary" style="margin-top:25px; display:inline-flex;">
-          View HackerRank Profile <i class="fa-solid fa-arrow-up-right-from-square"></i>
-        </a>
-      </div>
+  <!-- Changed the outer div to an 'a' tag to make the whole card clickable -->
+  <a href="https://www.hackerrank.com/profile/komal_career16" target="_blank" class="hacker-achievement glass-card border-purple" style="text-decoration: none; color: inherit; display: block; cursor: pointer;">
+    
+    <div class="achievement-icon"><i class="fa-solid fa-star"></i></div>
+    <h3>5-Star Gold Badge — SQL</h3>
+    <p>Achieved the 5-Star Gold Badge in SQL on HackerRank, reflecting a strong foundation in SQL, Advanced SQL, and MIS & Data Analytics. I enjoy solving real-world data problems and transforming raw data into meaningful insights.</p>
+    
+    <div class="hacker-tags">
+      <span class="tag-pill badge-purple">Joins</span>
+      <span class="tag-pill badge-cyan">CTEs</span>
+      <span class="tag-pill badge-pink">Subqueries</span>
+      <span class="tag-pill badge-blue">Window Functions</span>
+      <span class="tag-pill badge-purple">Query Optimization</span>
     </div>
+    
+    <!-- Changed the inner <a> to a <span> so it acts as a styled button without breaking the parent link -->
+    <span class="btn-premium btn-premium-secondary" style="margin-top:25px; display:inline-flex;">
+      View HackerRank Profile <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </span>
+    
+  </a>
+</div>
   </section>
 
   <!-- Contact Section -->
